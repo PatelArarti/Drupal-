@@ -1,0 +1,23 @@
+{# event_registration_report.html.twig #}
+{% if registrations %}
+    <table>
+        <thead>
+            <tr>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Event Selection</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for registration in registrations %}
+                <tr>
+                    <td>{{ registration.full_name }}</td>
+                    <td>{{ registration.email }}</td>
+                    <td>{{ registration.event_selection }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No registrations found.</p>
+{% endif %}

@@ -1,0 +1,23 @@
+event_registration.register_form:
+  path: '/event/registration'
+  defaults:
+    _form: '\Drupal\event_registration\Form\EventRegistrationForm'
+    _title: 'Event Registration'
+  requirements:
+    _permission: 'access content'
+
+event_registration.confirmation:
+  path: '/event/registration/confirmation'
+  defaults:
+    _controller: '\Drupal\event_registration\Controller\EventRegistrationController::confirmation'
+    _title: 'Event Registration Confirmation'
+  requirements:
+    _permission: 'access content'    
+
+event_registration.admin_report:
+  path: '/admin/event_registration/report'
+  defaults:
+    _title: 'Registration Report'
+    _controller: '\Drupal\event_registration\Controller\EventRegistrationReportController::content'
+  requirements:
+    _permission: 'access administration pages'

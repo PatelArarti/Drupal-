@@ -1,0 +1,5 @@
+name: 'EventRegistration'
+type: module
+description: 'Create custom event registration.'
+package: 'custom'
+core_version_requirement: ^10

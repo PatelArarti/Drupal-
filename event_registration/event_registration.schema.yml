@@ -1,0 +1,34 @@
+<?php
+
+// Define the event entity schema.
+function event_management_schema() {
+    $schema['event'] = [
+      'fields' => [
+        'id' => [
+          'type' => 'serial',
+          'not null' => TRUE,
+          'description' => 'The primary identifier for the event entity.',
+        ],
+        'title' => [
+          'type' => 'varchar',
+          'length' => 255,
+          'not null' => TRUE,
+          'description' => 'The title of the event.',
+        ],
+        'event_date' => [
+          'type' => 'datetime',
+          'not null' => TRUE,
+          'description' => 'The date and time of the event.',
+        ],
+        'max_attendees' => [
+          'type' => 'int',
+          'not null' => TRUE,
+          'description' => 'The maximum number of attendees for the event.',
+        ],
+      ],
+      'primary key' => ['id'],
+    ];
+  
+    return $schema;
+  }
+  
